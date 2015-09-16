@@ -1,8 +1,10 @@
-# Animal Sounds Program
-print "Enter an animal that makes a sound:"
-animal = gets.chomp
-print "What sound does a chicken make?"
-sounds = gets.chomp* 3.downcase
+# Choose an animal
+puts "Enter an animal that makes a sound:"
+my_animal = gets.chomp
+# What sound your animal makes?
+puts "What sound does a #{my_animal} make?"
+animal_sound = gets.chomp
+
 
 # Animal Sound Output
-puts "The chicken goes #{sounds}"
+puts "The #{my_animal.downcase} goes #{animal_sound.downcase * 3}"
