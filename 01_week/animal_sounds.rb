@@ -17,5 +17,5 @@ animal_sound = gets.chomp
 puts "The " + my_animal.downcase + " goes " + animal_sound.downcase.strip + " how many times?"
 sound_times = gets.chomp.to_i
 
-# Animal Sound Output with string concatnation
+# Output with string concatenation
 puts "The " + my_animal.downcase + " goes " + (animal_sound.downcase.strip + "," + " ") * (sound_times - 1) + animal_sound.downcase.strip + "."
