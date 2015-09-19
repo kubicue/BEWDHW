@@ -1,3 +1,0 @@
-# GA-BEWD-Homework 
-
- 
