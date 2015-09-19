@@ -9,6 +9,8 @@
 puts "Enter an animal that makes a sound:"
 my_animal = gets.chomp
 
+
+
 # What sound your animal makes
 puts "What sound does a #{my_animal.downcase} make?"
 animal_sound = gets.chomp
