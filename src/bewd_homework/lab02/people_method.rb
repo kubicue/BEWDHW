@@ -1,8 +1,8 @@
-#number = 1
-number = 2
+#switch = 1
+switch = 2
 
-if number == 1
+if switch == 1
   puts "Person"
-else  number == 2
+else  switch == 2
   puts "People"
 end
