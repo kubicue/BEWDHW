@@ -1,3 +1,5 @@
+# In progress ...
+
 puts "Welcome to Apartment Decision Maker"
 puts "We will find you an aparment that accomodate your budget."
 puts "To best fits your needs answer the question with simple Yes or No"
@@ -15,7 +17,7 @@ while (not user_feedback)
 end
 user_feedback = false
 while (not user_feedback)
-      puts "What city do you like to live? ie.[Los Angeles, San Diego]"
+      puts "What city do you like to live? ie.[Los Angeles, San Diego]?"
       answer = gets.chomp.downcase
 
       if (answer == "yes" or answer == "no")
