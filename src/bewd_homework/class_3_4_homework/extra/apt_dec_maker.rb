@@ -5,6 +5,8 @@ puts "We will find you an aparment that accomodate your budget."
 puts "To best fits your needs answer the question with simple Yes or No"
 
 user_feedback = false
+
+------ work()
 while (not user_feedback)
       puts "Do you want to look for an aparment? (Yes or No)"
       answer = gets.chomp.downcase
@@ -24,6 +26,6 @@ while (not user_feedback)
         answer = true
       else
         puts "Please anwser the question with yes or no."
-      
+
     end
 end
