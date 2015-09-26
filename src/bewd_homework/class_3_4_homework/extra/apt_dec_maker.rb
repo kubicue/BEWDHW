@@ -24,5 +24,6 @@ while (not user_feedback)
         answer = true
       else
         puts "Please anwser the question with yes or no."
+      
     end
 end
