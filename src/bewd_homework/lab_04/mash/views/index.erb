@@ -1,0 +1,20 @@
+
+<html>
+<head>
+ <title>Mash News</title>
+</head>
+<body>
+<h1>Mashable News:</h1>
+<ul>
+  <% @articles["hot"].each do |article| %>
+  <li><%= "#{article['title']} by: #{article['author']}"%><br>
+       Other usefull stuff:<br>
+      <a href="<%= article['link'] %>">Read More</a>
+       <a href="#"><img src="<%= article['image'] %>" width="100%" /></a>
+     </li>
+   <% end %>
+ </ul>
+
+</ul>
+</body>
+</html>
