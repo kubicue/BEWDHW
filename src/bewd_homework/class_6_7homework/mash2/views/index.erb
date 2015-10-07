@@ -1,0 +1,58 @@
+
+<html>
+<head>
+ <title>Mashable Sinatra App</title>
+ <link rel="stylesheet" type="text/css" href="https://goo.gl/7KuzjX">
+ <style>
+  #brand{font-weight: bold; color: silver; margin-left: 22px;}
+  ul{list-style: none;}
+  li{font-weight:500; font-size: 2rem; line-height: 1.3 em;}
+  .topic{font-weight: bold; font-size: 28px; color: navy;}
+  .headline{font-size: 26px; font-weight:bold; color: #8a8c8e;}
+  .author{font-size: 11px; color: #636436; margin-left: 20px; margin-top: -20px; text-transform: uppercase; padding-bottom:20px;}
+  .truncate {
+  width: 780px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ </style>
+</head>
+<body>
+<div class ="container">
+<h1 id="brand">Sinatra Mashable Stories:</h1>
+</div>
+<div class ="container">
+<ul>
+  <h3 class="topic">Hot</h3>
+  <% @articles["hot"].each do |article| %>
+  <li><a class="headline btn btn-link truncate" href="<%= article['link'] %>"><%= "#{article['title']}"%></a>
+  <br/><span class="author"><%="by: #{article['author']}"%></span><br/><br/>
+
+       <p><a href="<%= article['link'] %>"><img src="<%= article['image'] %>" width="100%" /></a></p>
+     </li>
+   <% end %>
+ </ul>
+ <ul>
+   <h3 class="topic">New</h3>
+   <% @articles["new"].each do |article| %>
+   <li><a class="headline btn btn-link truncate" href="<%= article['link'] %>"><%= "#{article['title']}"%></a>
+   <br/><span class="author"><%="by: #{article['author']}"%></span><br/><br/>
+
+        <p><a href="<%= article['link'] %>"><img src="<%= article['image'] %>" width="100%" /></a></p>
+      </li>
+    <% end %>
+  </ul>
+  <ul>
+    <h3 class="topic">Rising</h3>
+    <% @articles["rising"].each do |article| %>
+    <li><a class="headline btn btn-link truncate" href="<%= article['link'] %>"><%= "#{article['title']}"%></a>
+    <br/><span class="author"><%="by: #{article['author']}"%></span><br/><br/>
+
+         <p><a href="<%= article['link'] %>"><img src="<%= article['image'] %>" width="100%" /></a></p>
+       </li>
+     <% end %>
+   </ul>
+ </div>
+</body>
+</html>
