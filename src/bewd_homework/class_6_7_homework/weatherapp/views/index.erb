@@ -1,4 +1,26 @@
-
-<% @weather["currently"].each do |wr| %>
-<%= "#{wr["summary"]}"%><%= "#{wr["timezone"]}"%>
-<% end %>
+<html>
+<head>
+<title>Sinatra Forecast IO</title>
+<link rel="stylesheet" type="text/css" href="https://goo.gl/7KuzjX">
+<style>
+body{background: #f8f8f8; margin-top: 30px;}
+#brand{font-weight: bold; color: silver; margin-left: 22px;}
+.key-item{ color: gray; font-size: 30px; font-weight: 600; margin-left: 22px;}
+.loc{color: #8a8f8e; font-weight: 600; font-size: 22px; }
+.message{color: salmon; font-size: 20px; font-weight: bold; margin-left: 22px; }
+.sup{color: silver;}
+</style>
+</head>
+<body>
+  <div class ="container">
+    <h1 id="brand">Sinatra &amp; Forecast io</h1>
+    <div id="w-wrap">
+    <p class="message"><span class="loc">San Diego:</span> <%=@url['minutely']['summary'] %></p>
+    <p class="key-item">Temp: <%=@url['currently']['temperature'] %><sup class="sup">&deg;</sup> </p>
+    <p class="key-item">Wind Speed: <%=@url['currently']['windSpeed'] %><sup class="sup">mph</sup></p>
+    <p class="key-item">Wind Direction: <%=@url['currently']['windBearing'] %><sup class="sup">&deg;</sup></p>
+    <p class="key-item">Visibility: <%=@url['currently']['visibility'] %><sup class="sup">mi.</sup></p>
+    </div>
+  </div>
+</body>
+</html>
