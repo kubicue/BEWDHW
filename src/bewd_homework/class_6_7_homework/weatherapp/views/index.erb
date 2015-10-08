@@ -1,0 +1,4 @@
+
+<% @weather["currently"].each do |wr| %>
+<%= "#{wr["summary"]}"%><%= "#{wr["timezone"]}"%>
+<% end %>
