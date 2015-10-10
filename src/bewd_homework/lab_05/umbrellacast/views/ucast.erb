@@ -1,0 +1,30 @@
+<h1>Pantscast</h1>
+
+<p>It is currently <%= @temp %> <sup>&deg;</sup>F at your zipcode <%= @usr_zipcode %></p>
+
+<% @hourly.each do |hour| %>
+
+  <% if hour['temperature'] >= 70 %>
+    <h3>SHORTS</h3>
+  <% else %>
+    <h3>PANTZZZZZZ</h3>
+  <% end %>
+
+  <% if hour['precipProbability'] >= 0.5 %>
+    <h4>BRING AN UMBRELLA</h4>
+  <% else %>
+    <h4>NO UMBRELLA</h4>
+  <% end %>
+
+  <h5><%= Time.at(hour['time']) %></h5>
+  <p>
+  It will be <%= hour['temperature'] %>.
+
+  <% if hour['cloudCover'] >= 0.5 %>
+    It will be cloudy
+  <% else %>
+    It will be clear(ish).
+  <% end %>
+  </p>
+
+<% end %>
