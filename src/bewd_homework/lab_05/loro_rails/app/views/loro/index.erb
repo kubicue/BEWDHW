@@ -1,2 +1,8 @@
 <h1>Welcome to Loro</h1>
+<h2> Loro said: <%=params[:text]%></h2>
 <p>This a simple app build with Ruby on Rails. </p>
+<%= form_tag("/loro", method: "get") do %>
+  <%= label_tag(:text, "Say What!?") %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("Go") %>
+<% end %>
