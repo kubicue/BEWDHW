@@ -12,6 +12,7 @@
  .wisdom{font-size:45px; margin-top: 85px; font-weight:bold;text-align: center;}
  .summary{font-size: 12px; text-transform: uppercase;}
  .temp{font-size: 38px; font-weight: bold; text-align: center;}
+ .wiz-link{font-weight: bold; text-align: center;}
  </style>
  </head>
  <body>
@@ -22,12 +23,12 @@
     <span class="glyphicon glyphicon-map-marker"></span> <span class="loc">Santa Monica, CA</span><br/>
     <span class="summary"><%=@weather['minutely']['summary'] %></span><br/><br/>
     <span class="temp"><%=@weather['currently']['temperature'] %><sup class="sup">&deg;</sup></span>
-    
+
   </div>
 </div>
     <div class="container">
   <h3 class="wisdom"><%=@zenmsg%></h3>
-
+   <p class="wiz-link"><a href="<%= @zen_seek%>" target="_blank">More wisdom knowledge</a></p>
   </div>
 </body>
 </html>

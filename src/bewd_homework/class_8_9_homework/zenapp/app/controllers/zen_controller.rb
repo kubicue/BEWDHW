@@ -8,6 +8,8 @@ class ZenController < ApplicationController
     @nature_url = HTTParty.get(url).parsed_response
     wf = 'https://api.forecast.io/forecast/8b0e1f8b53a5e7e0e6b2a1b2ced3ceda/32.7150,-117.1625'
     @weather = HTTParty.get(wf).parsed_response
+
+    @zen_seek = "https://www.google.com/?q=#{@zenmsg}"
   end
 
 end
