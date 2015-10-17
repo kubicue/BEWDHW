@@ -3,16 +3,30 @@
  <title>Zen Github API</title>
  <link rel="stylesheet" type="text/css" href="https://goo.gl/7KuzjX">
  <style>
- body{background:url('<%= @nature_url ['url'] %>'); color:white;}
- h1{font-size: 50px;}
- .container{background: transparent; margin-top: 30px; text-align: center;}
- .wisdom{font-size:50px; font-weight:600;}
+ body{background:url('<%= @nature_url ['url'] %>'); color:white; line-height: 1.5em;}
+
+ .brand{font-size:30px; font-weight: bold; color: snow-white;}
+ .w-box{float: right; margin-top: -60px;}
+ .loc{font-weight:bold; color: white;}
+ .container{background: transparent; margin-top: 30px;}
+ .wisdom{font-size:45px; margin-top: 85px; font-weight:bold;text-align: center;}
+ .summary{font-size: 12px; text-transform: uppercase;}
+ .temp{font-size: 38px; font-weight: bold; text-align: center;}
  </style>
  </head>
  <body>
-  <div class="container">
-  <h1>Zen App</h1>
-  <h2 class="wisdom"><%=@zenmsg%></h2>
+   <div class="container">
+  <h1 class="brand">Zen App</h1>
+
+  <div class="w-box">
+    <span class="glyphicon glyphicon-map-marker"></span> <span class="loc">Santa Monica, CA</span><br/>
+    <span class="summary"><%=@weather['minutely']['summary'] %></span><br/><br/>
+    <span class="temp"><%=@weather['currently']['temperature'] %><sup class="sup">&deg;</sup></span>
+  </div>
+</div>
+    <div class="container">
+  <h3 class="wisdom"><%=@zenmsg%></h3>
+
   </div>
 </body>
 </html>
