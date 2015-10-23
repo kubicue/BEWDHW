@@ -1,0 +1,7 @@
+<h1>Listing Students</h1>
+
+  <% @students.each do |student| %>
+    <strong>Name:</strong> <%= student.name %><br/>
+    <strong>Email:</strong> <%= student.email %><br/>
+    <strong>Ice Cream:</strong> <%= student.ice_cream %><br/>
+  <% end %>
