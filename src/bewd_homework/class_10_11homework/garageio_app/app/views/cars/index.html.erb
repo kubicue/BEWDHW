@@ -1,0 +1,24 @@
+<div class="container">
+<h2>Hello <%=@user%></h2>
+
+<h3>Listing Cars</h3>
+
+  <table class="table table-striped">
+  <tr>
+  <th><strong>Make</strong></th>
+  <th><strong>Model</strong></th>
+  <th><strong>Year</strong></th>
+  <th><strong>Color</strong></th>
+  <th><strong>Nickname</strong></th>
+  </tr>
+    <% @cars.each do |car| %>
+  <tr>
+  <td><%= car.make %></td>
+  <td><%= car.model %></td>
+  <td><%= car.year %></td>
+  <td><%= car.color %></td>
+  <td><%= car.nickname %></td>
+</tr>
+  <% end %>
+</table>
+</div>
