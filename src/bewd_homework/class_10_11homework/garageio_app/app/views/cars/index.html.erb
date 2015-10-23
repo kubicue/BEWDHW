@@ -2,7 +2,9 @@
 <h2>Hello <%=@user%></h2>
 
 <h3>Listing Cars</h3>
-
+ <% if @cars.size == 0 %>
+   <h4>There is not car present on the garage.</h4>
+   <% else %>
   <table class="table table-striped">
   <tr>
   <th><strong>Make</strong></th>
@@ -21,4 +23,5 @@
 </tr>
   <% end %>
 </table>
+<% end %>
 </div>
