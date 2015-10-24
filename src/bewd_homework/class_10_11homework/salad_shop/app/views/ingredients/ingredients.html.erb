@@ -1,0 +1,26 @@
+<h1>The Salad Shop</h1>
+<h2>Ingredient List:</h2>
+<a href="/">Back Home</a>
+<% if @ingredients.size == 0 %>
+    <h4>Hey you don't have any ingredient to make salad. <br/>
+        Your database in empty.</h4>
+    <% else %>
+<h3>Ingredients inventory:</h3>
+<table class="table table-bordered" width="100%">
+  <tr>
+    <th><strong>Name</strong></th>
+    <th><strong>Type</strong></th>
+    <th><strong>QTY</strong>.</th>
+    <th><strong>Unit</strong></th>
+  </tr>
+<% @ingredients.each do |ingredient| %>
+    <tr>
+    <td><%= ingredient.name %></td>
+    <td><%= ingredient.ingredient_type %></td>
+    <td><%= ingredient.quantity %></td>
+    <td><%= ingredient.unit %></td>
+    <tr>
+   <% end %>
+
+</table>
+<% end %>
