@@ -1,0 +1,11 @@
+<h1>All Our Songs</h1>
+
+<a href="/">return home</a>
+
+<ul>
+<% @songs.each do |s| %>
+  <li><%= s.title %> by <em><%= s.artist %></em> <small><%= s.year %> | <%= s.time %></small></li>
+<% end %>
+</ul>
+<a href="/songs">Show me songs</a>
+<a href="/shuffle">Now shuffle dem songs</a>

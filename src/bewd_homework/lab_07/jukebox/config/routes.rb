@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get '/' => 'home#index'
-  get '/track' => 'track#track'
-  get '/signup'=> 'signup#signup'
-
   # You can have the root of your site routed with "root"
+  get '/' => 'jukebox#home'
+  get '/songs' => 'jukebox#songs'
+  get '/shuffle' => 'jukebox#shuffle'
+
   # root 'welcome#index'
 
   # Example of regular route:

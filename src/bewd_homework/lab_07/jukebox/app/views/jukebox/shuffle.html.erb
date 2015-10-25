@@ -1,0 +1,10 @@
+<h1>Jukebox#shuffle</h1>
+<h1>Shuffle!</h1>
+
+<a href="/">return home</a>
+
+<ol>
+<% @songs.each do |s| %>
+  <li><%= s.title %> by <em><%= s.artist %></em> <small><%= s.year %> | <%= s.time %></small></li>
+<% end %>
+</ol>
