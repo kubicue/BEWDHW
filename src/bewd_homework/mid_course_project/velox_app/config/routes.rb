@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get '/' => 'home#index'
   get '/track' => 'track#track'
   get '/signup'=> 'signup#signup'
-
+  get '/ship' => 'ship#ship'
+  post 'ship' => 'ship#ship'
+  get '/show' => 'ship#show'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
