@@ -22,7 +22,7 @@
         <td><%= product.in_stock %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,3 +31,14 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<br>
+<hr>
+List users here:<br>
+<% @users.each do |user| %>
+  <%= user.name %><br>
+  <%= user.email %> <br>
+<% end %>
+<br>
+<hr>
+Your product is: <br>
+<%= @product.name %>
