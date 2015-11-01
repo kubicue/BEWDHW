@@ -31,14 +31,3 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-<br>
-<hr>
-List users here:<br>
-<% @users.each do |user| %>
-  <%= user.name %><br>
-  <%= user.email %> <br>
-<% end %>
-<br>
-<hr>
-Your product is: <br>
-<%= @product.name %>

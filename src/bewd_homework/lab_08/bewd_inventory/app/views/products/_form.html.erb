@@ -1,33 +1,16 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<%= form_for @product do |f| %>
 
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  Name
+  <%= f.text_field :name %><br>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :qty %><br>
-    <%= f.number_field :qty %>
-  </div>
-  <div class="field">
-    <%= f.label :in_stock %><br>
-    <%= f.check_box :in_stock %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  Description
+  <%= f.text_area :description %><br>
+
+  Qty.
+  <%= f.number_field :qty %><br>
+
+  In Stock?
+  <%= f.check_box :in_stock %><br>
+
+  <%= f.submit "Add Product" %>
 <% end %>
