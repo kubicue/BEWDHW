@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+    <img src="<%= @car.photo %>" alt="Car image" width="480px" height="350px"/>
+  </div>
+  <div class="col-md-8">
+   <ul class="pull-right">
+   <li><strong>Year:</strong> <%= @car.year %></li>
+   <li><strong>Make:</strong> <%= @car.make %></li>
+   <li><strong>Trim:</strong> <%= @car.trim %></li>
+   <li><strong>Model:</strong> <%= @car.car_model %></li>
+   <li><strong>Color:</strong> <%= @car.color %></li>
+   <li><strong>Engine Type:</strong> <%= @car.engine %></li>
+   <li><strong>Transmision Type:</strong> <%= @car.transmision %></li>
+   <li><strong>Value:</strong> <%= @car.car_value %></li>
+   <li><strong>Date purchase:</strong> <%= @car.date_purchase %></li>
+   </ul>
+   <p class="pull-right">
+     <button><%= link_to 'Edit', edit_car_path(@car) %></button> |
+     <button><%= link_to 'Back', cars_path %></button>
+   </p>
+  </div>
+</div>
+</div>

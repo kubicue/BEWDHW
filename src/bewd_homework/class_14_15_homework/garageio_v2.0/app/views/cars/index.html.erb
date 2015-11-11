@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Listing Cars</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Trim</th>
+      <th>Model</th>
+      <th>Color</th>
+      <th>Engine</th>
+      <th>Transmision</th>
+      <th>Value</th>
+      <th>DOP</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><img src="<%= car.photo %>" alt="Car Image" width="150px" height="102px"/></td>
+        <td><%= car.year %></td>
+        <td><%= car.make %></td>
+        <td><%= car.trim %></td>
+        <td><%= car.car_model %></td>
+        <td><%= car.color %></td>
+        <td><%= car.engine %></td>
+        <td><%= car.transmision %></td>
+        <td>$<%= car.car_value %></td>
+        <td><%= car.date_purchase %></td>
+        <td><button><%= link_to 'Show', car %></button> </td>
+        <td><button> <%= link_to 'Edit', edit_car_path(car) %></button></td>
+        <td><button> <%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car', new_car_path %>
+</div>
